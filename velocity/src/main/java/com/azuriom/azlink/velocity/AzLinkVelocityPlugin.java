@@ -8,6 +8,7 @@ import com.azuriom.azlink.common.logger.Slf4jLoggerAdapter;
 import com.azuriom.azlink.common.platform.PlatformInfo;
 import com.azuriom.azlink.common.platform.PlatformType;
 import com.azuriom.azlink.common.scheduler.SchedulerAdapter;
+import com.azuriom.azlink.common.utils.VersionInfo;
 import com.azuriom.azlink.velocity.command.VelocityCommandExecutor;
 import com.azuriom.azlink.velocity.command.VelocityCommandSender;
 import com.azuriom.azlink.velocity.integrations.LimboAuthIntegration;
@@ -33,7 +34,7 @@ import java.util.stream.Stream;
 @Plugin(
         id = "azlink",
         name = "AzLink",
-        version = "${pluginVersion}",
+        version = VersionInfo.VERSION,
         description = "The plugin to link your Azuriom website with your server.",
         url = "https://azuriom.com",
         authors = "Azuriom Team",

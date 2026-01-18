@@ -46,7 +46,7 @@ public class VotePlaceholderProvider implements PlaceholderProvider, Runnable, L
 
     @Override
     public void run() {
-        if (this.pendingRefresh || this.lastUpdate.isBefore(Instant.now().minus(5, ChronoUnit.MINUTES))) {
+        if (this.pendingRefresh || this.lastUpdate.isBefore(Instant.now().minusSeconds(60))) {
             refreshData();
         }
     }

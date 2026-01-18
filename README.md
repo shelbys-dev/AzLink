@@ -12,7 +12,7 @@ This plugin currently supports the following platforms:
 * [Velocity](https://velocitypowered.com/)
 * [Nukkit](https://cloudburstmc.org/articles/)
 
-> [!INFO]
+> [!NOTE]
 > NeoForge and Fabric versions of the plugin are available in the [dev/mods branch](https://github.com/Azuriom/AzLink/tree/dev/mods).
 
 ## Setup
@@ -22,6 +22,20 @@ This plugin currently supports the following platforms:
 The plugin works with the same .jar for all the platforms, except Bukkit/Spigot 1.7.10 which requires the legacy version of the plugin.
 
 You just need to download the plugin, add it to the `plugins` folder of your server, and restart your server.
+
+## Building
+
+AzLink uses [Gradle](https://gradle.org/) for dependency management and builds.
+
+Java **25** JDK or newer is required.
+
+### Compiling from source
+
+```sh
+./gradlew build
+```
+
+The output JAR files are located in `universal/build/libs` and `universal-legacy/build/libs`.
 
 ## PlaceholderAPI Placeholders
 
