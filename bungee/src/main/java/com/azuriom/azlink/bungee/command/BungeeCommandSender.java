@@ -34,7 +34,7 @@ public class BungeeCommandSender implements CommandSender {
     public void sendMessage(String message) {
         String formatted = ChatColor.translateAlternateColorCodes('&', message);
 
-        this.sender.sendMessage(TextComponent.fromLegacyText(formatted));
+        this.sender.sendMessage(TextComponent.fromLegacy(formatted));
     }
 
     @Override

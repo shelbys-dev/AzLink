@@ -11,6 +11,7 @@ import com.azuriom.azlink.common.platform.PlatformType;
 import com.azuriom.azlink.common.scheduler.JavaSchedulerAdapter;
 import com.azuriom.azlink.common.scheduler.SchedulerAdapter;
 import com.azuriom.azlink.common.tasks.TpsTask;
+import com.azuriom.azlink.common.utils.VersionInfo;
 import com.azuriom.azlink.sponge.legacy.command.SpongeCommandExecutor;
 import com.azuriom.azlink.sponge.legacy.command.SpongeCommandSender;
 import com.google.common.collect.Iterables;
@@ -35,7 +36,7 @@ import java.util.stream.Stream;
 @Plugin(
         id = "azlink",
         name = "AzLink",
-        version = "${pluginVersion}",
+        version = VersionInfo.VERSION,
         description = "The plugin to link your Azuriom website with your server.",
         url = "https://azuriom.com",
         authors = "Azuriom Team",
