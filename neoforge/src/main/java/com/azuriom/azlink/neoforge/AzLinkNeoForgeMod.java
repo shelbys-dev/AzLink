@@ -116,7 +116,7 @@ public final class AzLinkNeoForgeMod implements AzLinkPlatform {
                 .map(IModInfo::getDisplayName)
                 .orElse("unknown");
 
-        return new PlatformInfo(name, FMLLoader.versionInfo().neoForgeVersion());
+        return new PlatformInfo(name, FMLLoader.getCurrent().getVersionInfo().neoForgeVersion());
     }
 
     @Override

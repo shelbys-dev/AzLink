@@ -1,12 +1,16 @@
 package com.azuriom.azlink.fabric.command;
 
 import com.azuriom.azlink.common.command.CommandSender;
+import net.minecraft.command.permission.Permission;
+import net.minecraft.command.permission.PermissionLevel;
 import net.minecraft.entity.Entity;
 import net.minecraft.server.command.ServerCommandSource;
 
 import java.util.UUID;
 
 public class FabricCommandSource implements CommandSender {
+
+    private static final Permission PERMISSION_LEVEL_OWNERS = new Permission.Level(PermissionLevel.OWNERS);
 
     private final ServerCommandSource source;
 
@@ -35,6 +39,6 @@ public class FabricCommandSource implements CommandSender {
 
     @Override
     public boolean hasPermission(String permission) {
-        return this.source.hasPermissionLevel(3);
+        return this.source.getPermissions().hasPermission(PERMISSION_LEVEL_OWNERS);
     }
 }
